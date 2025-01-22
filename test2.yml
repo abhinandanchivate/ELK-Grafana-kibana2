@@ -1,0 +1,30 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/*.log
+    fields:
+      log_topic: "filebeat-logs"
+    fields_under_root: true
+    json.keys_under_root: true
+    json.add_error_key: true
+    multiline.pattern: '^\['
+    multiline.negate: true
+    multiline.match: after
+
+output.kafka:
+  enabled: true
+  hosts: ["kafka:9092"]
+  topic: "filebeat-logs"
+  partition.round_robin:
+    reachable_only: false
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 1000000
+
+setup.kibana:
+  host: "kibana:5601"
+
+setup.template.settings:
+  index.number_of_shards: 1
+  index.codec: best_compression

@@ -1,0 +1,3 @@
+{"@timestamp":"2025-01-21T18:24:33.061244836Z","@version":"1","message":"Autoreload is disabled because the development mode is off.","logger_name":"Application","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2025-01-21T18:24:33.07388392Z","@version":"1","message":"Application started in 0.198 seconds.","logger_name":"Application","thread_name":"main","level":"INFO","level_value":20000}
+{"@timestamp":"2025-01-21T18:24:33.296151545Z","@version":"1","message":"Responding at http://0.0.0.0:8081","logger_name":"Application","thread_name":"DefaultDispatcher-worker-1","level":"INFO","level_value":20000}

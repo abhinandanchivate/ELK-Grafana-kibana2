@@ -1,0 +1,24 @@
+curl -X PUT "http://localhost:9200/_settings" -H 'Content-Type: application/json' -d'
+{
+  "index": {
+    "number_of_replicas": 0
+  }
+}'
+
+
+{"id":"BFQ1ipQBsJuWAV1VeCCx","name":"my-api-key","expiration":1737571947708,"api_key":"REnyx6IISveRKMOoXV2xWg","encoded":"QkZRMWlwUUJzSnVXQVYxVmVDQ3g6UkVueXg2SUlTdmVSS01Pb1hWMnhXZw=="}%    
+
+
+
+
+
+filebeat.inputs:
+- type: log
+  paths:
+  - '/var/lib/docker/containers/*/*.log'
+  json.message_key: log
+  json.keys_under_root: true
+  processors:
+  - add_docker_metadata: ~
+output.elasticsearch:
+  hosts: ["localhost:9200"]
