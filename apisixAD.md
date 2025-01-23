@@ -1,6 +1,3 @@
-To implement **authentication and authorization** in **Apache APISIX** via **Microsoft Active Directory (AD)**, you can integrate APISIX with Microsoft's **OAuth 2.0** or **LDAP-based** authentication methods. Below is a step-by-step guide to achieve this:
-
----
 
 ## **Approach 1: OAuth 2.0 (Preferred) using Microsoft Entra ID (formerly Azure AD)**
 
