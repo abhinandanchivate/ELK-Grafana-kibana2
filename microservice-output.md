@@ -242,4 +242,3 @@ postgres           | Database ready for connections
 
 ---
 
-This should help you simulate different test cases and observe how the system behaves under normal and failure conditions. Let me know if you need further assistance!
