@@ -291,4 +291,3 @@ For other microservices (Order, User, Payment, Notification), follow the same pa
 
 ---
 
-This setup provides a fully functional **Ktor-based eCommerce microservices architecture** with **Consul for service discovery, circuit breaker, and retry patterns**, managed via **Docker Compose**, ensuring complete code and deployment setup.
